@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubik's Cube Solver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Rubik's Cube Solver</h1>
+
+    <div id="cube">
+        <div class="side" id="front" onclick="changeColor('front')"></div>
+        <div class="side" id="back" onclick="changeColor('back')"></div>
+        <div class="side" id="left" onclick="changeColor('left')"></div>
+        <div class="side" id="right" onclick="changeColor('right')"></div>
+        <div class="side" id="top" onclick="changeColor('top')"></div>
+        <div class="side" id="bottom" onclick="changeColor('bottom')"></div>
+    </div>
+
+    <h3>Click a side to choose color (Red, Green, Blue, Yellow, White, Orange):</h3>
+    <div id="colorPicker">
+        <button onclick="setColor('red')">Red</button>
+        <button onclick="setColor('green')">Green</button>
+        <button onclick="setColor('blue')">Blue</button>
+        <button onclick="setColor('yellow')">Yellow</button>
+        <button onclick="setColor('white')">White</button>
+        <button onclick="setColor('orange')">Orange</button>
+    </div>
+
+    <h3>Upload Images for Each Side (Optional):</h3>
+    <input type="file" id="frontImage" accept="image/*">
+    <input type="file" id="backImage" accept="image/*">
+    <input type="file" id="leftImage" accept="image/*">
+    <input type="file" id="rightImage" accept="image/*">
+    <input type="file" id="topImage" accept="image/*">
+    <input type="file" id="bottomImage" accept="image/*">
+
+    <button id="solveButton">Solve Cube</button>
+    <div id="solution"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
